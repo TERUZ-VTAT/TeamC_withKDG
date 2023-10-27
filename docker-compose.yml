@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web:
+    container_name: Team3_Flask
+    build: ./DockerFiles/Flask
+    volumes:
+      - ./app:/app
+    ports:
+      - 8080:80
+    # tty: true
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    container_name: Team3_Database
+    image: mysql:8.0
+    volumes:
+      - ./MySQL:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: "flask_database"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "pass"
+      MYSQL_ROOT_PASSWORD: "pass"
+    healthcheck:   # add healthcheck
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "user", "-p$MYSQL_ROOT_PASSWORD"]
+      interval: 3s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
