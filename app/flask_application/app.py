@@ -8,6 +8,9 @@ def HeadPage():
 @app.route('/profile')
 def ProfilePage():
     return render_template("profile.html")
+@app.route('/home')
+def PostList():
+    return render_template("postlist.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=80)

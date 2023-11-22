@@ -1,5 +1,11 @@
 header{
     background-color: #f0f0f0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+button{
+    z-index: 2;
 }
 .menubutton{
     display: flex;
@@ -18,4 +24,7 @@ header{
     width: 70%;
     background-color:rgb(70, 70, 70);
     border-radius: 10px;
+}
+.pos-fix{
+    height: 80px;
 }

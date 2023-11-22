@@ -20,7 +20,7 @@
     align-items: center;
 }
 .cp-trend{
-    padding: 2%;
+    padding: 1%;
 }
 .cp-title{
     font-size: 2em;
@@ -37,7 +37,6 @@
 }
 .cp-name-text{
     margin: 0;
-    margin-left: 2%;
 }
 .evaluation{
     margin: 2.5%;
@@ -47,5 +46,13 @@
     top: 0;
 }
 .income{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+.income-template{
+    margin: 0;
+}
+.price{
     margin: 0;
 }

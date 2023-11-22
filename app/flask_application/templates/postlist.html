@@ -5,35 +5,74 @@
         <link rel="stylesheet" href="{{ url_for('static',filename='css/postlist.css') }}">
     </head>
     <body>
-        <h1>ここにヘッダーがくる</h1>
+        {% include "header.html" %}
         <div class="container">
             <h1>現在人気の募集</h1>
             <div class="company-list">
-                <div class="company cp-trend">
+                <a class="company cp-trend">
                     <p class="cp-title cp-title-trend">☆超簡単！高収入！☆</p>
                     <div class="cp-name">
                         <img src="{{ url_for('static',filename='images/User.svg') }}">
-                        <h1 class="cp-name-text">Sagi.Co.Ltd</h1>
+                        <h1 class="cp-name-text">Sagi Co.Ltd</h1>
                     </div>
                     <h3 class="evaluation">☆☆☆☆☆5</h3>
-                </div>
+                </a>
             </div>
+
             <h2>最近追加された募集</h2>
             <div class="company-list">
-                <div class="company">
-                    <p class="cp-title">☆超簡単！高収入！☆</p>
-                    <div class="cp-name">
-                        <h2 class="income">月収:</h2>
+                <a class="company">
+                    <p class="cp-title">最近1</p>
+                    <div class="income">
+                        <h2 class="income-template">月収:</h2>
+                        <h2 class="price">120万~240万</h2>
                     </div>
                     <h3 class="evaluation">☆☆☆☆☆5</h3>
-                </div>
-                <div class="company">
-                    <p class="cp-title">☆超簡単！高収入！☆</p>
-                    <div class="cp-name">
-                        <h2 class="income">月収:</h2>
+                </a>
+                <a class="company">
+                    <p class="cp-title">最近2</p>
+                    <div class="income">
+                        <h2 class="income-template">月収:</h2>
+                        <h2 class="price">300万前後</h2>
                     </div>
                     <h3 class="evaluation">☆☆☆☆☆5</h3>
-                </div>
+                </a>
+                <a class="company">
+                    <p class="cp-title">最近3</p>
+                    <div class="income">
+                        <h2 class="income-template">月収:</h2>
+                        <h2 class="price">時価</h2>
+                    </div>
+                    <h3 class="evaluation">☆☆☆☆☆5</h3>
+                </a>
+            </div>
+
+            <h2>その他の募集</h2>
+            <div class="company-list">
+                <a class="company">
+                    <p class="cp-title">その他1</p>
+                    <div class="income">
+                        <h2 class="income-template">月収:</h2>
+                        <h2 class="price">120万~240万</h2>
+                    </div>
+                    <h3 class="evaluation">☆☆☆☆☆5</h3>
+                </a>
+                <a class="company">
+                    <p class="cp-title">その他2</p>
+                    <div class="income">
+                        <h2 class="income-template">月収:</h2>
+                        <h2 class="price">300万前後</h2>
+                    </div>
+                    <h3 class="evaluation">☆☆☆☆☆5</h3>
+                </a>
+                <a class="company">
+                    <p class="cp-title">その他3</p>
+                    <div class="income">
+                        <h2 class="income-template">月収:</h2>
+                        <h2 class="price">時価</h2>
+                    </div>
+                    <h3 class="evaluation">☆☆☆☆☆5</h3>
+                </a>
             </div>
         </div>
     </body>
