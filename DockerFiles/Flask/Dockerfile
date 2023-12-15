@@ -8,6 +8,7 @@ RUN pip3 install mysql-connector-python
 RUN pip3 install SQLAlchemy
 RUN pip3 install Flask-SQLAlchemy
 RUN pip3 install Flask-Migrate
+RUN pip3 install pymysql
 
 RUN mkdir /app
 
