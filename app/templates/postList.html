@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}投稿一覧{% endblock %}
+
+{% block content %}
+<div>
+    <div class="text-center mt-10">
+        <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" href="/post">ポストをする</a>
+    </div>
+    <div class="container mx-auto px-8 pt-5">
+        {% if posts %}
+            {% for post in posts %}
+            <li>{{ post.title }}：{{post.content}}</li>
+            {% endfor %}
+        {% else %}
+            <div class="text-center mt-10">現在、投稿はありません</div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}

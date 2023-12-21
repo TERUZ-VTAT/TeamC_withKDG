@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  flask:
+    build: .
+    volumes:
+      - .:/app
+    command: flask run 
+    ports: 
+      - "5050:5000"
+    environment: 
+      FLASK_APP: ${FLASK_APP}
+      FLASK_ENV: ${FLASK_ENV}
+      FLASK_DEBUG: ${FLASK_DEBUG}
+      FLASK_RUN_HOST: ${FLASK_RUN_HOST}
+      FLASK_RUN_PORT: ${FLASK_RUN_PORT}
+  node:
+    image: node
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    command: sh -c 'cd ./app && npm ci && npm run watch'
+  db:
+    image: mysql:8.0
+    ports:
+      - 33060:3360
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: ${TIME_ZONE}
+    volumes:
+      - ./volumes/mysqldata/flask:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
