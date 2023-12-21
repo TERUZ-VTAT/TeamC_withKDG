@@ -1,21 +1,59 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ホーム</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/postlist.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>現在人気の募集</h1>
+            <div class="company-list">
+                <a class="company cp-trend">
+                    <p class="cp-title cp-title-trend">☆超簡単！高収入！☆</p>
+                    <div class="cp-name">
+                        <img src="{{ url_for('static',filename='images/User.svg') }}">
+                        <h1 class="cp-name-text">Sagi Co.Ltd</h1>
+                    </div>
+                    <h3 class="evaluation">☆☆☆☆☆5</h3>
+                </a>
+            </div>
 
-{% block title %}投稿一覧{% endblock %}
+            {% if posts %}
+                <h2>最近追加された募集</h2>
+                {% for post in posts %}
+                    <li>{{ post.title }}：{{post.content}}</li>
+                {% endfor %}
 
-{% block content %}
-<div>
-    <div class="text-center mt-10">
-        <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" href="/post">ポストをする</a>
-    </div>
-    <div class="container mx-auto px-8 pt-5">
-        {% if posts %}
-            {% for post in posts %}
-            <li>{{ post.title }}：{{post.content}}</li>
-            {% endfor %}
-        {% else %}
-            <div class="text-center mt-10">現在、投稿はありません</div>
-        {% endif %}
-    </div>
-</div>
-{% endblock %}
-{% block footer %}{% endblock %}
+                <h2>その他の募集</h2>
+                <div class="company-list">
+                    <a class="company">
+                        <p class="cp-title">その他1</p>
+                        <div class="income">
+                            <h2 class="income-template">月収:</h2>
+                            <h2 class="price">120万~240万</h2>
+                        </div>
+                        <h3 class="evaluation">☆☆☆☆☆5</h3>
+                    </a>
+                    <a class="company">
+                        <p class="cp-title">その他2</p>
+                        <div class="income">
+                            <h2 class="income-template">月収:</h2>
+                            <h2 class="price">300万前後</h2>
+                        </div>
+                        <h3 class="evaluation">☆☆☆☆☆5</h3>
+                    </a>
+                    <a class="company">
+                        <p class="cp-title">その他3</p>
+                        <div class="income">
+                            <h2 class="income-template">月収:</h2>
+                            <h2 class="price">時価</h2>
+                        </div>
+                        <h3 class="evaluation">☆☆☆☆☆5</h3>
+                    </a>
+                </div>
+            {% else %}
+                <h1>投稿が見つかりませんでした</h1>
+            {% endif %}
+        </div>
+    </body>
+</html>

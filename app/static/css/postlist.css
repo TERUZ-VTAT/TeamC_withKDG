@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    padding-top: 1%;
+}
+.company-list{
+    display: flex;
+    flex-direction: column;
+}
+.company{
+    position: relative;
+    display: flex;
+    background-color: #d9d9d9;
+    padding: 1%;
+    width: 90%;
+    border-radius: 30px;
+    margin: 1%;
+    height: 50%;
+    align-items: center;
+}
+.cp-trend{
+    padding: 1%;
+}
+.cp-title{
+    font-size: 2em;
+    margin:0;
+    font-weight: bold;
+}
+.cp-title-trend{
+    font-size: 2.5em;
+}
+.cp-name{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+.cp-name-text{
+    margin: 0;
+}
+.evaluation{
+    margin: 2.5%;
+    margin-top: 1.5%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.income{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+.income-template{
+    margin: 0;
+}
+.price{
+    margin: 0;
+}

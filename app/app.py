@@ -55,7 +55,7 @@ def create_app():
         return redirect(url_for("login"))
 
     @app.route("/post", methods=["GET", "POST"])
-    @login_required  # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
+    # @login_required  # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
     def add_post():
         if request.method == "POST":
             postInfo = Post(
@@ -70,7 +70,7 @@ def create_app():
 
 
     @app.route("/postlist")
-    @login_required  # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
+    # @login_required  # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
     def postList():
         posts = Post.query.all()
         return render_template("postList.html", posts=posts)
