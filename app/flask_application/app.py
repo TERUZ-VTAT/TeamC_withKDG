@@ -5,6 +5,9 @@ app = Flask(__name__)
 @app.route('/')
 def HeadPage():
     return render_template("header.html")
+@app.route('/post')
+def PostPage():
+    return render_template("post.html")
 @app.route('/profile')
 def ProfilePage():
     return render_template("profile.html")

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>投稿</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/post.css') }}">
+        
+    </head>
+    <body>
+      {% include "header.html" %}
+      <div class="post">
+        <form action="/form.php" method="post" class="post_form">
+          <div>
+            <label for="title" class="post_title">投稿タイトル</label>
+            <br/>
+            <input type="text" id="title" name="title" class="post_item">
+        </div>
+        <div>
+          <label for="money" class="post_money">推定月収</label>
+          <br/>
+          <input type="text" id="money" name="money" class="post_item">
+        </div>
+        <div>
+          <label for="work_cateogory" class="post_work_cateogory">仕事カテゴリー</label>
+          <br/>
+          <input type="text" id="work_cateogory" name="work_cateogory" class="post_item">
+        </div>
+        <div>
+          <label for="post_detail" class="post_detail">投稿内容</label>
+          <br/>
+          <textarea id="detail" name="detail"></textarea>
+        </div>
+          <input class="post_button" type="submit" value="投稿">
+        </form>
+      </div>
+    </body>
+</html>
