@@ -67,6 +67,10 @@ def create_app():
             return redirect("/postlist")
         else:
             return render_template("post.html")
+        
+    @app.route("/post_detail")
+    def postDetail():
+        return render_template("post_detail.html")
 
 
     @app.route("/postlist")
