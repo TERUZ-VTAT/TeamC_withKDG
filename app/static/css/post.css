@@ -1,0 +1,56 @@
+.post {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.post_form {
+  width: 90%;
+  padding-left: 20%;
+}
+
+.post_title {
+  font-size: 2em;
+}
+
+.post_money {
+  font-size: 2em;
+}
+
+.post_work_cateogory {
+  font-size: 2em;
+}
+
+.post_detail {
+  font-size: 2em;
+}
+
+.post_item {
+  border: 2px solid;
+  height: 70px;
+  width: 70%;
+  border-radius: 10px;
+  font-size: 2.5em;
+  background-color: rgb(222, 222, 222);
+  border-color: rgb(150, 150, 150);
+  margin-bottom: 24px;
+}
+
+#content {
+  border: 2px solid;
+  height: 230px;
+  width: 70%;
+  font-size: 2.5em;
+  border-radius: 10px;
+  resize: none;
+  background-color: rgb(222, 222, 222);
+  border-color: rgb(150, 150, 150);
+}
+
+.post_button {
+  height: 80px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 40px;
+}

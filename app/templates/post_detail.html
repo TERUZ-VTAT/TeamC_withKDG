@@ -16,7 +16,7 @@
   <div class="post_title">
     <div class="title_and_star">
       <h1>
-        <タイトル>
+        {{ details.title }}
       </h1>
       <div>
         <input type="checkbox" name="star" class="checkbox" id="star">
@@ -37,11 +37,11 @@
     <div class="post_explanation">
       <h3>説明</h3>
       <div>
-        <h3>< 説明内容 ></h3>
+        <h3>{{ details.content }}</h3>
       </div>
     </div>
     <div class="post_monthly_income">
-      <h3>推定月収:<〇〇万円></h3>
+      <h3>推定月収:{{ details.money }}</h3>
     </div>
   </div>
 </div>

@@ -1,22 +1,44 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block title %}投稿{% endblock %}
+<head>
+  <title>投稿</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/post.css') }}">
 
-{% block content %}
-<div class="flex justify-center items-center">
-    <form action="/post" method="POST" class="flex flex-col justify-center items-center mt-10">
-        <div class="mb-4">
-            <label for="title" class="block text-gray-700">タイトル</label>
-            <input type="text" name="title" id="title" class="w-full px-3 py-2 border border-gray-300 rounded">
-        </div>
-        <div class="mb-4">
-            <label for="content" class="block text-gray-700">内容</label>
-            <textarea name="content" id="content" class="w-full px-3 py-2 border border-gray-300 rounded"></textarea>
-        </div>
-        <div class="mb-4">
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">投稿</button>
-        </div>
+</head>
+
+<body>
+  {% include "header.html" %}
+  <div class="post">
+    <form action="/post" method="post" class="post_form">
+      <div>
+        <label for="title" class="post_title">投稿タイトル</label>
+        <br />
+        <input type="text" id="title" name="title" class="post_item">
+      </div>
+      <div>
+        <label for="money" class="post_money">推定月収</label>
+        <br />
+        <input type="text" id="money" name="money" class="post_item">
+      </div>
+      <div>
+        <label for="work_cateogory" class="post_work_cateogory">仕事カテゴリー</label>
+        <br />
+        <input type="text" id="work_cateogory" name="work_cateogory" class="post_item">
+      </div>
+      <div>
+        <label for="post_detail" class="post_detail">投稿内容</label>
+        <br />
+        <textarea id="content" name="content"></textarea>
+      </div>
+      <div>
+        <label for="company" class="post_detail">企業名</label>
+        <br />
+        <input type="text" id="company" name="company"></input>
+      </div>
+      <input class="post_button" type="submit" value="投稿">
     </form>
-</div>
-{% endblock %}
-{% block footer %}{% endblock %}
+  </div>
+</body>
+
+</html>

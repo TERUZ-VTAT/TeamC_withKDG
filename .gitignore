@@ -1,5 +1,5 @@
 # npm 
-volumes
+/volumes
 node_modules
 app/static/dist
 migrations

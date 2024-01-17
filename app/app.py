@@ -61,6 +61,8 @@ def create_app():
             postInfo = Post(
                 title=request.form["title"],
                 content=request.form["content"],
+                money=request.form["money"],
+                company=request.form["company"]
             )
             db.session.add(postInfo)
             db.session.commit()
@@ -68,9 +70,10 @@ def create_app():
         else:
             return render_template("post.html")
         
-    @app.route("/post_detail")
-    def postDetail():
-        return render_template("post_detail.html")
+    @app.route("/post_detail/<int:id>")
+    def postDetail(id):
+        details = Post.query.get(id)
+        return render_template("post_detail.html", details=details)
 
 
     @app.route("/postlist")

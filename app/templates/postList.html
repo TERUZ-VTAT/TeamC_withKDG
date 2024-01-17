@@ -1,21 +1,37 @@
-{% extends 'layout.html' %}
-
-{% block title %}投稿一覧{% endblock %}
-
-{% block content %}
-<div>
-    <div class="text-center mt-10">
-        <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" href="/post">ポストをする</a>
-    </div>
-    <div class="container mx-auto px-8 pt-5">
-        {% if posts %}
-            {% for post in posts %}
-            <li>{{ post.title }}：{{post.content}}</li>
-            {% endfor %}
-        {% else %}
-            <div class="text-center mt-10">現在、投稿はありません</div>
-        {% endif %}
-    </div>
-</div>
-{% endblock %}
-{% block footer %}{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ホーム</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/postlist.css') }}">
+        
+    </head>
+    <body>
+        {% include "header.html" %}
+        <div class="container">
+            <!-- <h1>現在人気の募集</h1>
+            <div class="company-list">
+                <div class="company cp-trend">
+                    <p class="cp-title cp-title-trend">☆超簡単！高収入！☆</p>
+                    <div class="cp-name">
+                        <img src="{{ url_for('static',filename='images/User.svg') }}">
+                        <h1 class="cp-name-text">Sagi.Co.Ltd</h1>
+                    </div>
+                </div>
+            </div> -->
+            <h2>現在募集されているリスト</h2>
+            <div class="company-list">
+                {% if posts %}
+                    {% for post in posts %}
+                        <a class="company"  href="{{ url_for('postDetail', id=post.id) }}">
+                            <p class="cp-title">{{ post.title }}</p>
+                            <div class="cp-name">
+                                <h2 class="income">月収:{{ post.money }}</h2>
+                            </div>
+                        </a>
+                    {% endfor %}
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>
