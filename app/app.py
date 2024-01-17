@@ -71,16 +71,23 @@ def create_app():
             return render_template("post.html")
         
     @app.route("/post_detail/<int:id>")
+    @login_required
     def postDetail(id):
         details = Post.query.get(id)
         return render_template("post_detail.html", details=details)
 
 
     @app.route("/postlist")
-    @login_required  # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
+    # @login_required  
+    # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
     def postList():
         posts = Post.query.all()
         return render_template("postList.html", posts=posts)
+    
+    @app.route("/")
+    @login_required
+    def account():
+        return render_template("")
 
     return app
 
