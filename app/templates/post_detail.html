@@ -26,22 +26,24 @@
             </svg>
         </label>
     </div>
-      <!-- <img src="{{ url_for('static', filename='/images/Star1.svg')}}" alt="star_image" class="star_image"> -->
     </div>
     <div  class="document_request_btn">
       <a>資料請求する</a>
     </div>
   </div>
   <hr class="hr">
+  <div class="post-category">
+    <h2>カテゴリー:  <b>{{ details.category }}</b></h2>
+  </div>
   <div class="post_content">
     <div class="post_explanation">
-      <h3>説明</h3>
+      <h2>説明</h2>
       <div>
         <h3>{{ details.content }}</h3>
       </div>
     </div>
     <div class="post_monthly_income">
-      <h3>推定月収:{{ details.money }}</h3>
+      <h2>推定月収:  <b>{{ details.money }}</b></h2>
     </div>
   </div>
   <div  class="document_request_btn">
