@@ -6,7 +6,7 @@
         
     </head>
     <body>
-        {% include "header.html" %}
+        {% include "layout.html" %}
         <div class="container">
             <!-- <h1>現在人気の募集</h1>
             <div class="company-list">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div> -->
-            <h2>現在募集されているリスト</h2>
+            <h2 class="cp-title">現在募集されているリスト</h2>
             <div class="company-list">
                 {% if posts %}
                     {% for post in posts %}
