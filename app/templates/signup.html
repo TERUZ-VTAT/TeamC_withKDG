@@ -7,9 +7,9 @@
     <body>
         <div class="titles">
             <h1 class="signup">サインアップ</h1>
-            <div class="orSignup">
+            <div class="orlogin">
                 <h2 class="or">または</h2>
-                <a href="/login"><h1 class="ログイン">ログイン</h1></a>
+                <a href="/login"><h1 class="login">ログイン</h1></a>
             </div>
         </div>
         <form action="/signup" method="POST" class="inputs">
@@ -21,9 +21,18 @@
         </form>
         <div class="rightarea">
             <h3 style="margin-top: 150px;">または</h3>
-            <a href="" class="socialsignup"><h2 style="margin-left: 80px;">Googleアカウントでサインアップ</h2></a>
-            <a href="" class="socialsignup"><h2 style="margin-left: 80px;">FaceBookでサインアップ</h2></a>
-            <a href="" class="socialsignup"><h2 style="margin-left: 80px;">Xからサインアップ</h2></a>
+            <a href="" class="socialsignup">
+                <img src="{{ url_for('static', filename='images/googlelogo.svg') }}" alt="" style="height: 80%; aspect-ratio: 1/1; margin-left: 10px;">
+                <h2 style="margin-left: 10px;">Googleアカウントでサインアップ</h2>
+            </a>
+            <a href="" class="socialsignup">
+                <img src="{{ url_for('static', filename='images/facebooklogo.svg') }}" alt="" style="height: 80%; aspect-ratio: 1/1; margin-left: 10px;">
+                <h2 style="margin-left: 10px;">FaceBookでサインアップ</h2>
+            </a>
+            <a href="" class="socialsignup">
+                <img src="{{ url_for('static', filename='images/xlogo.svg') }}" alt="" style="height: 80%; aspect-ratio: 1/1; margin-left: 10px;">
+                <h2 style="margin-left: 10px;">Xからサインアップ</h2>
+            </a>
         </div>
     </body>
 </html>

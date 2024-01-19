@@ -20,9 +20,18 @@
         </form>
         <div class="rightarea">
             <h3 style="margin-top: 150px;">または</h3>
-            <a href="" class="sociallogin"><h2 style="margin-left: 80px;">Googleアカウントでログイン</h2></a>
-            <a href="" class="sociallogin"><h2 style="margin-left: 80px;">FaceBookでログイン</h2></a>
-            <a href="" class="sociallogin"><h2 style="margin-left: 80px;">Xからログイン</h2></a>
+            <a href="" class="sociallogin">
+                <img src="{{ url_for('static', filename='images/googlelogo.svg') }}" alt="" style="height: 80%; aspect-ratio: 1/1; margin-left: 10px;">
+                <h2 style="margin-left: 10px;">Googleアカウントでログイン</h2>
+            </a>
+            <a href="" class="sociallogin">
+                <img src="{{ url_for('static', filename='images/facebooklogo.svg') }}" alt="" style="height: 80%; aspect-ratio: 1/1; margin-left: 10px;">
+                <h2 style="margin-left: 10px;">FaceBookでログイン</h2>
+            </a>
+            <a href="" class="sociallogin">
+                <img src="{{ url_for('static', filename='images/xlogo.svg') }}" alt="" style="height: 80%; aspect-ratio: 1/1; margin-left: 10px;">
+                <h2 style="margin-left: 10px;">Xからログイン</h2>
+            </a>
         </div>
     </body>
 </html>
