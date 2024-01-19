@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request, url_for
 
 # ログインで必要なimport
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required, current_user
 # ログイン処理な必要なオブジェクトの定義
 from .models.auth import init_auth
 
@@ -91,6 +91,12 @@ def create_app():
     # @login_required
     def profile():
         return render_template("profile.html")
+    
+    @app.route("/user_posts/<int:user_id>")
+    # @login_required
+    def userPosts(user_id):
+        user_posts = Post.query.filter_by(user_id=user_id).all()
+        return render_template("user_posts.html", posts=user_posts)
 
     return app
 

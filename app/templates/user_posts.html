@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+    {% include "layout.html" %}
+    <div class="container">
+        <!-- <h1>現在人気の募集</h1>
+        <div class="company-list">
+            <div class="company cp-trend">
+                <p class="cp-title cp-title-trend">☆超簡単！高収入！☆</p>
+                <div class="cp-name">
+                    <img src="{{ url_for('static',filename='images/User.svg') }}">
+                    <h1 class="cp-name-text">Sagi.Co.Ltd</h1>
+                </div>
+            </div>
+        </div> -->
+        <h2 class="cp-title">現在募集されているリスト</h2>
+        <div class="company-list">
+            {% if posts %}
+                {% for post in posts %}
+                    <a class="company rounded-2xl shadow-xl"  href="{{ url_for('postDetail', id=post.id) }}">
+                        <p class="cp-title">{{ post.title }}</p>
+                        <div class="cp-name">
+                            <h2 class="income">カテゴリー:{{ post.category }}</h2>
+                        </div>
+                        <div class="cp-name">
+                            <h2 class="income">月収:{{ post.money }}</h2>
+                        </div>
+                    </a>
+                {% endfor %}
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</body>
+</html>
