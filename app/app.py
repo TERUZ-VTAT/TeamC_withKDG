@@ -5,6 +5,9 @@ from flask_login import login_user, logout_user, login_required, current_user
 # ログイン処理な必要なオブジェクトの定義
 from .models.auth import init_auth
 
+# 削除機能に必要なimport
+from flask_wtf import FlaskForm
+
 from .models.database import init_db, db
 from .models.post import Post
 from .models.user import User
@@ -55,7 +58,7 @@ def create_app():
         return redirect(url_for("login"))
 
     @app.route("/post", methods=["GET", "POST"])
-    # @login_required
+    @login_required
     # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
     def add_post():
         if request.method == "POST":
@@ -64,7 +67,8 @@ def create_app():
                 category= request.form["category"],
                 content=request.form["content"],
                 money=request.form["money"],
-                company=request.form["company"]
+                company=request.form["company"],
+                user_id=current_user.id,
             )
             db.session.add(postInfo)
             db.session.commit()
