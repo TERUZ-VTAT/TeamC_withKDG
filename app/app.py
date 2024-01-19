@@ -9,11 +9,12 @@ from .models.database import init_db, db
 from .models.post import Post
 from .models.user import User
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object("app.config.Config")
     # サーバー側で保持しておく必要があるシークレットキー。セッション等に必要。ランダムな値を使用する。
-    app.secret_key = 'secret_key_here' 
+    app.secret_key = 'secret_key_here'
 
     # ログイン処理のオプジェクトを設定
     init_auth(app)
@@ -61,7 +62,7 @@ def create_app():
         if request.method == "POST":
             postInfo = Post(
                 title=request.form["title"],
-                category= request.form["category"],
+                category=request.form["category"],
                 content=request.form["content"],
                 money=request.form["money"],
                 company=request.form["company"]
@@ -71,28 +72,28 @@ def create_app():
             return redirect("/postlist")
         else:
             return render_template("post.html")
-        
+
     @app.route("/post_detail/<int:id>")
     @login_required
     def postDetail(id):
         details = Post.query.get(id)
         return render_template("post_detail.html", details=details)
 
-
     @app.route("/postlist")
-    # @login_required  
+    # @login_required
     # @login_requiredのデコレータをつけることで、ログイン状態のみ表示
     def postList():
         posts = Post.query.all()
         # return render_template("postList.html")
         return render_template("postList.html", posts=posts)
-    
+
     @app.route("/profile")
     # @login_required
     def profile():
         return render_template("profile.html")
 
     return app
+
 
 app = create_app()
 
