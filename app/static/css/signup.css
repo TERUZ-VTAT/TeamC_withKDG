@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(219,234,254);
+}
 .titles{
     top: 80px;
     position: absolute;
@@ -28,14 +31,14 @@
 .inputarea{
     width: 600px;
     height: 60px;
-    border: 7px #bfbfbf solid;
-    background-color: #d9d9d9;
+    border: 7px rgb(66 91 107) solid;
+    background-color: #acd0e6;
     border-radius: 30px;
     font-size: xx-large;
     padding: 3px;
 }
 .rightarea{
-    background-color: #f2f2f2;
+    background-color: rgb(54, 120, 235);
     height: 80vh;
     position: absolute;
     right: 0;
@@ -47,7 +50,7 @@
 .socialsignup{
     width: 520px;
     height: 65px;
-    background-color: #d9d9d9;
+    background-color: #acd0e6;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -56,8 +59,8 @@
 .signupbutton{
     width: 120px;
     height: 45px;
-    border: #bfbfbf solid 3px;
-    background-color: #d9d9d9;
+    border: rgb(66 91 107) solid 3px;
+    background-color: #acd0e6;
     border-radius: 10px;
     color: #707070;
     cursor: pointer;
@@ -65,8 +68,8 @@
 .signupbutton:hover{
     width: 120px;
     height: 45px;
-    border: #707070 solid 3px;
-    background-color: #bfbfbf;
+    border: rgb(66 91 107) solid 3px;
+    background-color: rgb(155, 196, 212);
     border-radius: 10px;
     color: #707070;
     cursor: pointer;
