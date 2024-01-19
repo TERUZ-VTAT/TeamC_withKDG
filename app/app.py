@@ -24,7 +24,7 @@ def create_app():
     def signup():
         if request.method == "POST":
             user = User(
-                username=request.form["username"],
+                # username=request.form["username"],
                 email=request.form["email"],
                 password=request.form["password"],
             )
@@ -61,6 +61,7 @@ def create_app():
         if request.method == "POST":
             postInfo = Post(
                 title=request.form["title"],
+                category= request.form["category"],
                 content=request.form["content"],
                 money=request.form["money"],
                 company=request.form["company"]
