@@ -1,26 +1,18 @@
-a {
-  /* text-decoration: none; */
-  color:darkslategray
-}
-
-.profile {
-  margin-top: 0;
-}
 
 .acount_info_container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #B4B4B4;
-  height: 1000px;
+  background-color: rgb(66 91 107);
+  height: 950px;
   width: 220px;
 }
 
 .acount_info {
   height: 70px;
-  background-color: #cecece;
+  background-color: skyblue;
   width: 240px;
-  top: 50px;
+  top: 150px;
   position: absolute;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -28,19 +20,28 @@ a {
   align-items: center;
 }
 
+.acount_info {
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(66 91 107);
+}
+
 .acount_info_item {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   margin-left: 15px;
+  font-size: 20px;
+  color: white;
 }
 
 .company_acount_info {
-  background-color: #d9d9d9;
+  background-color:skyblue;
   height: 900px;
   width: 1100px;
   position: absolute;
   top: 100px;
   right: 0px;
   border-top-left-radius: 40px;
+  margin-top: 50px;
 }
 
 .company_info_list {
@@ -60,6 +61,7 @@ a {
 
 .company_info_item {
   font-size: 2em;
+
 }
 
 .profile_edit {
@@ -70,6 +72,9 @@ a {
   top: 0;
   position: absolute;
   margin: 60px;
+  border-radius: 15px;
+}
+.profile_edit img {
   border-radius: 15px;
 }
 

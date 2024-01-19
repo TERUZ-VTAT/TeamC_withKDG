@@ -3,9 +3,11 @@
     <head>
         <title>title</title>
         <link rel="stylesheet" href="{{ url_for('static',filename='css/profile.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     </head>
-    <body class="profile">
-        <div class="acount_info_container">
+    <body>
+        {% include "layout.html" %}
+        <div class="acount_info_container bg-slate-900">
             <div class="acount_info">
                 <h1>アカウント情報</h1>
             </div>
@@ -14,7 +16,7 @@
             <h2 class="acount_info_item"><a href="#">お気に入り</a></h2>
             <h2 class="acount_info_item"><a href="#">履歴</a></h2>
         </div>
-        <div class="company_acount_info">
+        <div class="company_acount_info shadow-2xl">
             <div class="company_info_list">
                 <div class="company_image"><img src="https://thumb.photo-ac.com/c5/c587e2ec29f7d4e9cbc69d392fa49f54_w.jpeg" alt="会社の写真" height="400" width="600"></div>
                 <div class="company_info_items">
@@ -23,7 +25,7 @@
                     <h1 class="company_info_item">連絡先:123-4567-890</h1>
                 </div>
             </div>
-            <div class="profile_edit"></div>
+            <div class="profile_edit"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR13Le1bzc_n-93YwyXNPNO62wYKFCqzEr_Gw&usqp=CAU" alt="編集アイコン"></div>
             <div class="company_detail_info_item">
                 <h1 class="company_info_item">職業: おしごと</h1>
                 <h1 class="company_info_item">経歴: 経済の歴史</h1>
