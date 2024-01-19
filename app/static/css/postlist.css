@@ -3,17 +3,22 @@
     flex-direction: column;
     padding: 5%;
     padding-top: 1%;
+    padding-left: 220px;
+    margin-top: 64px;
+    width: 100%;
+
 }
 .company-list{
     display: flex;
     flex-direction: column;
+    margin-top: 24px;
 }
 .company{
     position: relative;
     display: flex;
-    background-color: #d9d9d9;
-    padding: 1%;
-    width: 90%;
+    background-color: white;
+    padding: 16px 32px;
+    width: 100%;
     border-radius: 30px;
     margin: 1%;
     height: 50%;
@@ -24,7 +29,7 @@
 }
 .cp-title{
     font-size: 2em;
-    margin:0;
+    margin: 0;
     font-weight: bold;
 }
 .cp-title-trend{
@@ -48,4 +53,5 @@
 }
 .income{
     margin: 0;
+    font-size: 24px;
 }
