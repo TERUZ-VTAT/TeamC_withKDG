@@ -13,7 +13,7 @@
     flex-direction: column;
     margin-top: 24px;
 }
-.company{
+.post{
     position: relative;
     display: flex;
     background-color: white;
@@ -54,4 +54,24 @@
 .income{
     margin: 0;
     font-size: 24px;
+}
+
+.company{
+    margin: 0;
+    font-size: 24px;
+}
+
+/* 投稿削除ボタンのデザイン */
+.delete_button input {
+    border: 2px solid red;
+    border-radius: 0;
+    background: #fff;
+    margin-left: 64px;
+    color: red;
+    padding: 6px 20px;
+}
+
+.delete_button input:hover {
+    color: #fff;
+    background: red;
 }
