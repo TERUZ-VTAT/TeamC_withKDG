@@ -22,13 +22,16 @@
             <div class="company-list">
                 {% if posts %}
                     {% for post in posts %}
-                        <a class="company rounded-2xl shadow-xl"  href="{{ url_for('postDetail', id=post.id) }}">
+                        <a class="post rounded-2xl shadow-xl"  href="{{ url_for('postDetail', id=post.id) }}">
                             <p class="cp-title">{{ post.title }}</p>
                             <div class="cp-name">
                                 <h2 class="income">カテゴリー:{{ post.category }}</h2>
                             </div>
                             <div class="cp-name">
-                                <h2 class="income">月収:{{ post.money }}</h2>
+                                <h2 class="income">推定月収:{{ post.money }}</h2>
+                            </div>
+                            <div class="cp-name">
+                                <h2 class="company">企業名:{{ post.company }}</h2>
                             </div>
                         </a>
                     {% endfor %}
