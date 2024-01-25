@@ -31,6 +31,7 @@
   margin-bottom: 24px;
   box-shadow:3px 3px 10px rgba(0, 0, 0, 0.5) inset;
   margin-top: 8px;
+  padding: 4px 8px;
 }
 
 #content {
@@ -44,6 +45,7 @@
   border-color: rgb(150, 150, 150);
   box-shadow:3px 3px 10px rgba(0, 0, 0, 0.5) inset;
   margin-top: 8px;
+  padding: 4px 8px;
 }
 
 .post_button {
